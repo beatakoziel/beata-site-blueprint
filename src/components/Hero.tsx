@@ -35,17 +35,6 @@ const Hero = () => {
               As Software Developer I'm focused on creating solutions that truly meet user needs and drive value. I believe we can accomplish much more together :)
             </p>
           </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-300">
-            
-            <Button
-              onClick={handleContact}
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
-            >
-              <Mail className="mr-2" size={20} />
-              Contact me
-            </Button>
-          </div>
         </div>
       </div>
     </div>
