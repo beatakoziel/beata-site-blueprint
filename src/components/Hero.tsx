@@ -38,7 +38,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-2xl sm:text-3xl lg:text-4xl font-light mb-4 text-purple-400">
-              Make it done is my mantra.
+              "Make it done" is my mantra.
             </p>
             
             <p className="text-lg sm:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">

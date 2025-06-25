@@ -117,13 +117,6 @@ const Contact = () => {
               Send Message
             </Button>
           </div>
-
-          {/* Footer */}
-          <div className="mt-16 text-center border-t border-gray-700 pt-8">
-            <p className="text-gray-400">
-              © 2024 Beata Koziel. Built with React, TypeScript, and lots of ☕
-            </p>
-          </div>
         </div>
       </div>
     </div>
