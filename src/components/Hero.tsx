@@ -3,16 +3,6 @@ import { Download, Mail, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
-  const handleDownloadCV = () => {
-    // In a real implementation, this would download the actual PDF
-    console.log('Downloading CV...');
-    // You would typically have a PDF file in the public folder
-    // const link = document.createElement('a');
-    // link.href = '/cv.pdf';
-    // link.download = 'Beata_Koziel_CV.pdf';
-    // link.click();
-  };
-
   const handleContact = () => {
     window.location.href = 'mailto:beatakoziel.contact@gmail.com';
   };
@@ -47,18 +37,10 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-300">
-            <Button
-              onClick={handleDownloadCV}
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
-            >
-              <Download className="mr-2" size={20} />
-              Download CV
-            </Button>
             
             <Button
               onClick={handleContact}
-              variant="outline"
-              className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-gray-900 px-8 py-3 text-lg font-medium transition-all duration-200 hover:scale-105"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
             >
               <Mail className="mr-2" size={20} />
               Contact me

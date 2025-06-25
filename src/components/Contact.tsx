@@ -22,7 +22,7 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Connect with me",
-      action: () => window.open('https://linkedin.com', '_blank'),
+      action: () => window.open('https://www.linkedin.com/in/bkozie%C5%82/', '_blank'),
       color: "indigo"
     }
   ];

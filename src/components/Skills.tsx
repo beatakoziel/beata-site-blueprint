@@ -1,39 +1,30 @@
 import { Code, Database, Settings, TestTube } from 'lucide-react';
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Backend",
-      icon: Database,
-      skills: [
-        "Kotlin", "Java", "Groovy", "Spring Framework", "Apache Kafka", 
-        "MongoDB", "MySQL", "PostgreSQL", "Elasticsearch"
-      ],
-      color: "purple"
-    },
-    {
-      title: "Frontend",
-      icon: Code,
-      skills: ["Vue.js", "HTML", "CSS", "Bootstrap", "JavaScript"],
-      color: "blue"
-    },
-    {
-      title: "Tools & DevOps",
-      icon: Settings,
-      skills: [
-        "Git", "Jira", "Docker", "Jenkins", "Grafana", "Gradle", 
-        "Bitbucket", "IntelliJ IDEA", "Postman", "Visual Studio", 
-        "GitLab", "Maven", "RabbitMQ"
-      ],
-      color: "indigo"
-    },
-    {
-      title: "Testing",
-      icon: TestTube,
-      skills: ["JUnit5", "Kotest", "Spock", "Testcontainers", "Mockito", "RestAssured"],
-      color: "violet"
-    }
-  ];
+    const skillCategories = [
+        {
+            title: "Backend & Testing",
+            icon: Database,
+            skills: [
+                "Kotlin", "Java", "Groovy", "Spring Framework", "Apache Kafka",
+                "MongoDB", "MySQL", "PostgreSQL", "Elasticsearch",
+                "JUnit5", "Kotest", "Spock", "Testcontainers", "Mockito", "RestAssured"
+            ],
+            color: "purple"
+        },
+        {
+            title: "Dev Tools & CI/CD",
+            icon: Settings,
+            skills: [
+                "Git", "GitHub", "GitLab", "Bitbucket",
+                "Docker", "Jenkins", "Gradle", "Maven",
+                "Jira", "Grafana", "Postman", "IntelliJ IDEA", "Visual Studio",
+                "Copilot", "Junie"
+            ],
+            color: "indigo"
+        }
+    ];
+
 
   const getColorClasses = (color: string) => {
     const colors = {
@@ -81,35 +72,38 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {skillCategories.map((category, index) => {
-            const colorClasses = getColorClasses(category.color);
-            const Icon = category.icon;
-            
-            return (
-              <div
-                key={index}
-                className={`bg-gray-800 rounded-lg p-6 border ${colorClasses.border} ${colorClasses.hover} transition-all duration-300 hover:scale-105 hover:shadow-2xl`}
-              >
-                <div className="flex items-center mb-4">
-                  <Icon className={`${colorClasses.icon} mr-3`} size={24} />
-                  <h3 className="text-xl font-bold text-white">{category.title}</h3>
-                </div>
-                
-                <div className="space-y-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div
-                      key={skillIndex}
-                      className={`${colorClasses.bg} ${colorClasses.text} px-3 py-2 rounded-md text-sm font-medium border ${colorClasses.border} transition-all duration-200 hover:scale-105`}
-                    >
-                      {skill}
-                    </div>
-                  ))}
-                </div>
+          <div className="px-4 py-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto place-items-center">
+                  {skillCategories.map((category, index) => {
+                      const colorClasses = getColorClasses(category.color);
+                      const Icon = category.icon;
+
+                      return (
+                          <div
+                              key={index}
+                              className={`w-full bg-gray-800 rounded-xl p-6 h-full border ${colorClasses.border} ${colorClasses.hover} transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col`}
+                          >
+                              <div className="flex items-center mb-4">
+                                  <Icon className={`${colorClasses.icon} mr-3`} size={24} />
+                                  <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                              </div>
+
+                              <div className="flex flex-wrap gap-2 mt-auto">
+                                  {category.skills.map((skill, skillIndex) => (
+                                      <div
+                                          key={skillIndex}
+                                          className={`${colorClasses.bg} ${colorClasses.text} px-3 py-1.5 rounded-md text-sm font-medium border ${colorClasses.border} transition-all duration-200 hover:scale-105`}
+                                      >
+                                          {skill}
+                                      </div>
+                                  ))}
+                              </div>
+                          </div>
+                      );
+                  })}
               </div>
-            );
-          })}
-        </div>
+          </div>
+
 
         {/* Additional highlight section */}
         <div className="mt-16 text-center">

@@ -12,7 +12,7 @@ const Experience = () => {
         "Developed and maintained services for automating HR processes, such as time-off management, employee data, and contract handling",
         "Worked on various tools to support development and operations, including integrations (Kafka, Slack), data import solutions, and utility libraries to streamline workflows across teams"
       ],
-      technologies: ["Kotlin", "Apache Kafka", "MongoDB", "Spring Framework", "CI/CD", "Jira", "Slack"],
+      technologies: ["Kotlin", "Apache Kafka", "MongoDB", "Spring Framework", "Jira", "Slack"],
       isActive: true
     },
     {
@@ -22,11 +22,11 @@ const Experience = () => {
       description: "Worked on solutions for a mobile ticketing client and participated in the integration of the BLIK payment system into client platforms. Contributed to the development of both an internet panel for an insurance company and a charitable donation platform.",
       details: [
         "Mobile ticketing client solutions with payment integration",
-        "BLIK payment system integration into multiple client platforms",
+        "BLIK payment system integration analysis",
         "Insurance company internet panel development",
         "Charitable donation platform implementation"
       ],
-      technologies: ["Java", "Spring Framework", "Hibernate", "BLIK", "HTML", "CSS", "Bootstrap"],
+      technologies: ["Java", "Spring Framework", "Hibernate", "HTML", "CSS", "Bootstrap"],
       isActive: false
     },
     {

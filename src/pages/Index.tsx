@@ -13,8 +13,8 @@ const Index = () => {
 
   const sections = [
     { id: 'home', label: 'Home', icon: Home },
-    { id: 'experience', label: 'Experience', icon: Mail },
     { id: 'skills', label: 'Skills', icon: Download },
+    { id: 'experience', label: 'Experience', icon: Mail },
     { id: 'education', label: 'Education', icon: MapPin },
     { id: 'contact', label: 'Contact', icon: Linkedin },
   ];
@@ -29,7 +29,7 @@ const Index = () => {
         if (element) {
           const offsetTop = element.offsetTop;
           const height = element.offsetHeight;
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + height) {
             setActiveSection(section);
             break;
@@ -56,8 +56,9 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-purple-500/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="text-xl font-bold text-purple-400">GOAT SOFTWARE</div>
-            
+            <div className="text-xl text-purple-400">G O A T $ o f t w a r e</div>
+
+            {/* Desktop Navigation */}
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
               {sections.map((section) => (
@@ -114,19 +115,19 @@ const Index = () => {
         <section id="home">
           <Hero />
         </section>
-        
-        <section id="experience">
-          <Experience />
-        </section>
-        
+
         <section id="skills">
           <Skills />
         </section>
-        
+
+        <section id="experience">
+          <Experience />
+        </section>
+
         <section id="education">
           <Education />
         </section>
-        
+
         <section id="contact">
           <Contact />
         </section>
