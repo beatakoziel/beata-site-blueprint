@@ -42,7 +42,7 @@ const Hero = () => {
             </p>
             
             <p className="text-lg sm:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-              "I build backend stuff that doesn't break. Kotlin, Java, Kafka and clean code vibes only."
+              As Software Developer I'm focused on creating solutions that truly meet user needs and drive value. I believe we can accomplish much more together :)
             </p>
           </div>
 
@@ -63,11 +63,6 @@ const Hero = () => {
               <Mail className="mr-2" size={20} />
               Contact me
             </Button>
-          </div>
-
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ArrowDown className="text-purple-400" size={24} />
           </div>
         </div>
       </div>

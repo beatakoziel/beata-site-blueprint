@@ -21,20 +21,26 @@ const Education = () => {
 
   const training = [
     {
-      course: "Domain Driven Design",
-      provider: "Bottega",
+      course: "Introduction to DDD",
+      provider: "Bottega IT Minds",
+      type: "training",
+      icon: BookOpen
+    },
+    {
+      course: "Testing Microservices",
+      provider: "Bottega IT Minds",
       type: "training",
       icon: BookOpen
     },
     {
       course: "Apache Kafka",
-      provider: "Bottega",
+      provider: "Bottega IT Minds",
       type: "training",
       icon: BookOpen
     },
     {
-      course: "Testing Fundamentals",
-      provider: "Bottega",
+      course: "MongoDB Java Developer Path",
+      provider: "MongoDB",
       type: "training",
       icon: BookOpen
     }
@@ -87,10 +93,10 @@ const Education = () => {
           <div>
             <h3 className="text-2xl font-bold text-blue-400 mb-8 flex items-center">
               <Award className="mr-3" size={28} />
-              Professional Training
+              T R A I N I N G S
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {training.map((course, index) => (
                 <div
                   key={index}
@@ -115,9 +121,9 @@ const Education = () => {
           <div className="mt-16 text-center">
             <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg p-8 border border-gray-700">
               <blockquote className="text-xl italic text-gray-300 leading-relaxed">
-                "Education is not preparation for life; education is life itself."
+                "The more I learn, the more I realize how much I don't know."
               </blockquote>
-              <cite className="text-purple-400 mt-4 block">- John Dewey</cite>
+              <cite className="text-purple-400 mt-4 block">– Einstein (probably)</cite>
             </div>
           </div>
         </div>
