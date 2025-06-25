@@ -6,37 +6,45 @@ const Skills = () => {
     {
       title: "Backend",
       icon: Database,
-      skills: ["Kotlin", "Java", "Groovy", "Spring", "Kafka", "MongoDB"],
-      color: "emerald"
+      skills: [
+        "Kotlin", "Java", "Groovy", "Spring Framework", "Apache Kafka", 
+        "MongoDB", "MySQL", "PostgreSQL", "Elasticsearch", "JUnit5", 
+        "Kotest", "Spock", "Mockk", "RestAssured", "Testcontainers"
+      ],
+      color: "purple"
     },
     {
       title: "Frontend",
       icon: Code,
-      skills: ["Vue.js", "HTML", "CSS"],
+      skills: ["Vue.js", "HTML", "CSS", "Bootstrap", "JavaScript"],
       color: "blue"
     },
     {
-      title: "Tools",
+      title: "Tools & DevOps",
       icon: Settings,
-      skills: ["Git", "Jira", "Docker", "Jenkins", "Grafana"],
-      color: "purple"
+      skills: [
+        "Git", "Jira", "Docker", "Jenkins", "Grafana", "Gradle", 
+        "Bitbucket", "IntelliJ IDEA", "Postman", "Visual Studio", 
+        "GitLab", "Maven", "RabbitMQ"
+      ],
+      color: "indigo"
     },
     {
       title: "Testing",
       icon: TestTube,
-      skills: ["JUnit5", "Kotest", "Spock", "Testcontainers"],
-      color: "orange"
+      skills: ["JUnit5", "Kotest", "Spock", "Testcontainers", "Mockito", "RestAssured"],
+      color: "violet"
     }
   ];
 
   const getColorClasses = (color: string) => {
     const colors = {
-      emerald: {
-        bg: "bg-emerald-500/10",
-        border: "border-emerald-500/20",
-        text: "text-emerald-400",
-        icon: "text-emerald-400",
-        hover: "hover:border-emerald-400/50"
+      purple: {
+        bg: "bg-purple-500/10",
+        border: "border-purple-500/20",
+        text: "text-purple-400",
+        icon: "text-purple-400",
+        hover: "hover:border-purple-400/50"
       },
       blue: {
         bg: "bg-blue-500/10",
@@ -45,19 +53,19 @@ const Skills = () => {
         icon: "text-blue-400",
         hover: "hover:border-blue-400/50"
       },
-      purple: {
-        bg: "bg-purple-500/10",
-        border: "border-purple-500/20",
-        text: "text-purple-400",
-        icon: "text-purple-400",
-        hover: "hover:border-purple-400/50"
+      indigo: {
+        bg: "bg-indigo-500/10",
+        border: "border-indigo-500/20",
+        text: "text-indigo-400",
+        icon: "text-indigo-400",
+        hover: "hover:border-indigo-400/50"
       },
-      orange: {
-        bg: "bg-orange-500/10",
-        border: "border-orange-500/20",
-        text: "text-orange-400",
-        icon: "text-orange-400",
-        hover: "hover:border-orange-400/50"
+      violet: {
+        bg: "bg-violet-500/10",
+        border: "border-violet-500/20",
+        text: "text-violet-400",
+        icon: "text-violet-400",
+        hover: "hover:border-violet-400/50"
       }
     };
     return colors[color as keyof typeof colors];
@@ -107,7 +115,7 @@ const Skills = () => {
 
         {/* Additional highlight section */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 rounded-lg p-8 border border-emerald-500/20 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-lg p-8 border border-purple-500/20 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Always Learning
             </h3>

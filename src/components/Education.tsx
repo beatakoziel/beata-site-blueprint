@@ -55,7 +55,7 @@ const Education = () => {
         <div className="max-w-4xl mx-auto">
           {/* Education Section */}
           <div className="mb-12">
-            <h3 className="text-2xl font-bold text-emerald-400 mb-8 flex items-center">
+            <h3 className="text-2xl font-bold text-purple-400 mb-8 flex items-center">
               <GraduationCap className="mr-3" size={28} />
               Academic Education
             </h3>
@@ -64,16 +64,16 @@ const Education = () => {
               {education.map((edu, index) => (
                 <div
                   key={index}
-                  className="bg-gray-900 rounded-lg p-6 border border-gray-700 hover:border-emerald-400/50 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  className="bg-gray-900 rounded-lg p-6 border border-gray-700 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-xl"
                 >
                   <div className="flex items-start mb-4">
-                    <edu.icon className="text-emerald-400 mr-3 mt-1" size={24} />
+                    <edu.icon className="text-purple-400 mr-3 mt-1" size={24} />
                     <div>
                       <h4 className="text-xl font-bold text-white mb-2">
                         {edu.degree}
                       </h4>
                       <p className="text-gray-300 mb-2">{edu.institution}</p>
-                      <span className="bg-emerald-400/20 text-emerald-400 px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-purple-400/20 text-purple-400 px-3 py-1 rounded-full text-sm font-medium">
                         {edu.year}
                       </span>
                     </div>
@@ -117,7 +117,7 @@ const Education = () => {
               <blockquote className="text-xl italic text-gray-300 leading-relaxed">
                 "Education is not preparation for life; education is life itself."
               </blockquote>
-              <cite className="text-emerald-400 mt-4 block">- John Dewey</cite>
+              <cite className="text-purple-400 mt-4 block">- John Dewey</cite>
             </div>
           </div>
         </div>

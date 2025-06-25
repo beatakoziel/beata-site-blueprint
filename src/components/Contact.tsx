@@ -9,7 +9,7 @@ const Contact = () => {
       label: "Email",
       value: "beatakoziel.contact@gmail.com",
       action: () => window.location.href = 'mailto:beatakoziel.contact@gmail.com',
-      color: "emerald"
+      color: "purple"
     },
     {
       icon: MapPin,
@@ -23,18 +23,18 @@ const Contact = () => {
       label: "LinkedIn",
       value: "Connect with me",
       action: () => window.open('https://linkedin.com', '_blank'),
-      color: "purple"
+      color: "indigo"
     }
   ];
 
   const getColorClasses = (color: string) => {
     const colors = {
-      emerald: {
-        bg: "bg-emerald-500/10",
-        border: "border-emerald-500/20",
-        text: "text-emerald-400",
-        icon: "text-emerald-400",
-        hover: "hover:border-emerald-400/50 hover:shadow-emerald-400/25"
+      purple: {
+        bg: "bg-purple-500/10",
+        border: "border-purple-500/20",
+        text: "text-purple-400",
+        icon: "text-purple-400",
+        hover: "hover:border-purple-400/50 hover:shadow-purple-400/25"
       },
       blue: {
         bg: "bg-blue-500/10",
@@ -43,12 +43,12 @@ const Contact = () => {
         icon: "text-blue-400",
         hover: "hover:border-blue-400/50 hover:shadow-blue-400/25"
       },
-      purple: {
-        bg: "bg-purple-500/10",
-        border: "border-purple-500/20",
-        text: "text-purple-400",
-        icon: "text-purple-400",
-        hover: "hover:border-purple-400/50 hover:shadow-purple-400/25"
+      indigo: {
+        bg: "bg-indigo-500/10",
+        border: "border-indigo-500/20",
+        text: "text-indigo-400",
+        icon: "text-indigo-400",
+        hover: "hover:border-indigo-400/50 hover:shadow-indigo-400/25"
       }
     };
     return colors[color as keyof typeof colors];
@@ -58,7 +58,7 @@ const Contact = () => {
     <div className="min-h-screen py-20 bg-gray-900 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 w-40 h-40 bg-emerald-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-20 w-40 h-40 bg-purple-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-60 h-60 bg-blue-500/5 rounded-full blur-3xl"></div>
       </div>
 
@@ -100,7 +100,7 @@ const Contact = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-emerald-500/10 to-blue-500/10 rounded-lg p-8 border border-emerald-500/20">
+          <div className="text-center bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-lg p-8 border border-purple-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Work Together?
             </h3>
@@ -111,7 +111,7 @@ const Contact = () => {
             
             <Button
               onClick={() => window.location.href = 'mailto:beatakoziel.contact@gmail.com'}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-emerald-500/25"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
             >
               <Send className="mr-2" size={20} />
               Send Message

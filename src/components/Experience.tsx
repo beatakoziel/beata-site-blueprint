@@ -6,33 +6,53 @@ const Experience = () => {
     {
       company: "Symmetrical.AI",
       role: "Backend Developer",
-      period: "2022 – now",
-      description: "Kotlin, Kafka, Mongo, CI/CD stuff, led standups & refinements.",
-      technologies: ["Kotlin", "Kafka", "MongoDB", "CI/CD"],
+      period: "Jan 2022 – present",
+      description: "Working in a multicultural team with English as the primary language, contributing to projects from the very beginning—gathering requirements, breaking down tasks, and driving implementation. Actively involved in Jira management, task breakdown, sprint planning. Led meetings such as daily standups, retrospectives, and refinements.",
+      details: [
+        "Developed and maintained services for automating HR processes, such as time-off management, employee data, and contract handling",
+        "Worked on various tools to support development and operations, including integrations (Kafka, Slack), data import solutions, and utility libraries to streamline workflows across teams"
+      ],
+      technologies: ["Kotlin", "Apache Kafka", "MongoDB", "Spring Framework", "CI/CD", "Jira", "Slack"],
       isActive: true
     },
     {
       company: "Softy Labs",
       role: "Java Developer",
-      period: "2020 – 2021",
-      description: "Spring/Hibernate stuff + BLIK payment integration.",
-      technologies: ["Java", "Spring", "Hibernate", "BLIK"],
+      period: "Apr 2020 – Dec 2021",
+      description: "Worked on solutions for a mobile ticketing client and participated in the integration of the BLIK payment system into client platforms. Contributed to the development of both an internet panel for an insurance company and a charitable donation platform.",
+      details: [
+        "Mobile ticketing client solutions with payment integration",
+        "BLIK payment system integration into multiple client platforms",
+        "Insurance company internet panel development",
+        "Charitable donation platform implementation"
+      ],
+      technologies: ["Java", "Spring Framework", "Hibernate", "BLIK", "HTML", "CSS", "Bootstrap"],
       isActive: false
     },
     {
       company: "Rida Software",
-      role: "Fullstack Intern",
-      period: "2020",
-      description: "Vue + C# + invoice PDF parser. Wild combo but it worked.",
-      technologies: ["Vue.js", "C#", "PDF Processing"],
+      role: "Junior Fullstack Developer",
+      period: "Jul 2020 – Sep 2020",
+      description: "Contributed to the development of a car dealer application and a PDF extractor for automated invoice data processing.",
+      details: [
+        "Car dealer application development with modern web technologies",
+        "PDF data extraction automation for invoice processing",
+        "Full-stack development using Vue.js and C#"
+      ],
+      technologies: ["Vue.js", "C#", ".NET Core", "MS SQL", "Visual Studio", "PDF Processing"],
       isActive: false
     },
     {
       company: "Altar",
-      role: "Email Microservice Intern",
-      period: "2019",
-      description: "IMAP sorcery + admin panel builder.",
-      technologies: ["IMAP", "Microservices", "Admin Panel"],
+      role: "Backend Developer Intern",
+      period: "Jul 2019 – Aug 2019",
+      description: "Developed an email microservice and admin panel, focusing on IMAP integration and message management.",
+      details: [
+        "Email microservice development with IMAP integration",
+        "Admin panel builder for message management",
+        "Microservices architecture implementation"
+      ],
+      technologies: ["Java", "Spring Framework", "RabbitMQ", "JUnit5", "Mockito", "Maven", "Git", "GitLab", "IntelliJ IDEA"],
       isActive: false
     }
   ];
@@ -49,11 +69,11 @@ const Experience = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Timeline */}
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-emerald-400"></div>
+            <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-purple-400"></div>
 
             {experiences.map((exp, index) => (
               <div
@@ -63,37 +83,47 @@ const Experience = () => {
                 }`}
               >
                 {/* Timeline dot */}
-                <div className={`absolute w-4 h-4 bg-emerald-400 rounded-full border-4 border-gray-800 left-2 md:left-1/2 md:transform md:-translate-x-1/2 ${
-                  exp.isActive ? 'animate-pulse shadow-lg shadow-emerald-400/50' : ''
+                <div className={`absolute w-4 h-4 bg-purple-400 rounded-full border-4 border-gray-800 left-2 md:left-1/2 md:transform md:-translate-x-1/2 ${
+                  exp.isActive ? 'animate-pulse shadow-lg shadow-purple-400/50' : ''
                 }`}></div>
 
                 {/* Content card */}
                 <div className={`ml-12 md:ml-0 ${
                   index % 2 === 0 ? 'md:mr-12' : 'md:ml-12'
                 }`}>
-                  <div className="bg-gray-900 rounded-lg p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-gray-700 hover:border-emerald-400/50">
+                  <div className="bg-gray-900 rounded-lg p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-gray-700 hover:border-purple-400/50">
                     <div className="flex items-center gap-2 mb-2">
-                      <Calendar className="text-emerald-400" size={16} />
-                      <span className="text-emerald-400 font-medium">{exp.period}</span>
+                      <Calendar className="text-purple-400" size={16} />
+                      <span className="text-purple-400 font-medium">{exp.period}</span>
                       {exp.isActive && (
-                        <span className="bg-emerald-400/20 text-emerald-400 px-2 py-1 rounded-full text-xs font-medium">
+                        <span className="bg-purple-400/20 text-purple-400 px-2 py-1 rounded-full text-xs font-medium">
                           Current
                         </span>
                       )}
                     </div>
                     
                     <h3 className="text-xl font-bold text-white mb-1">{exp.company}</h3>
-                    <h4 className="text-lg text-gray-300 mb-3">{exp.role}</h4>
+                    <h4 className="text-lg text-gray-300 mb-4">{exp.role}</h4>
                     
                     <p className="text-gray-400 mb-4 leading-relaxed">
                       {exp.description}
                     </p>
                     
+                    {exp.details && (
+                      <ul className="text-gray-400 mb-4 space-y-1">
+                        {exp.details.map((detail, detailIndex) => (
+                          <li key={detailIndex} className="text-sm leading-relaxed">
+                            • {detail}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="bg-emerald-400/10 text-emerald-400 px-3 py-1 rounded-full text-sm font-medium border border-emerald-400/20"
+                          className="bg-purple-400/10 text-purple-400 px-3 py-1 rounded-full text-sm font-medium border border-purple-400/20"
                         >
                           {tech}
                         </span>

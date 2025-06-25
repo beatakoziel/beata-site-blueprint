@@ -128,12 +128,12 @@
 
   /* Custom gradient text */
   .gradient-text {
-    @apply bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent;
   }
 
   /* Hover effects */
   .hover-glow:hover {
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
   }
 }
 
