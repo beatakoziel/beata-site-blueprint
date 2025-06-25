@@ -53,10 +53,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-purple-500/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="text-xl font-bold text-emerald-400">Beata K.</div>
+            <div className="text-xl font-bold text-purple-400">GOAT SOFTWARE</div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -66,8 +66,8 @@ const Index = () => {
                   onClick={() => scrollToSection(section.id)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                     activeSection === section.id
-                      ? 'text-emerald-400 bg-emerald-400/10'
-                      : 'text-gray-300 hover:text-emerald-400 hover:bg-gray-800'
+                      ? 'text-purple-400 bg-purple-400/10'
+                      : 'text-gray-300 hover:text-purple-400 hover:bg-gray-800'
                   }`}
                 >
                   {section.label}
@@ -79,7 +79,7 @@ const Index = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-300 hover:text-emerald-400 transition-colors"
+                className="text-gray-300 hover:text-purple-400 transition-colors"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -89,7 +89,7 @@ const Index = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-gray-800 border-t border-gray-700">
+          <div className="md:hidden bg-gray-800 border-t border-purple-500/20">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {sections.map((section) => (
                 <button
@@ -97,8 +97,8 @@ const Index = () => {
                   onClick={() => scrollToSection(section.id)}
                   className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-all duration-200 ${
                     activeSection === section.id
-                      ? 'text-emerald-400 bg-emerald-400/10'
-                      : 'text-gray-300 hover:text-emerald-400 hover:bg-gray-700'
+                      ? 'text-purple-400 bg-purple-400/10'
+                      : 'text-gray-300 hover:text-purple-400 hover:bg-gray-700'
                   }`}
                 >
                   {section.label}

@@ -1,4 +1,3 @@
-
 import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 
 const Experience = () => {
@@ -78,9 +77,7 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className={`relative mb-12 md:mb-16 ${
-                  index % 2 === 0 ? 'md:text-right md:pr-8' : 'md:text-left md:pl-8'
-                }`}
+                className="relative mb-12 md:mb-16 text-right"
               >
                 {/* Timeline dot */}
                 <div className={`absolute w-4 h-4 bg-purple-400 rounded-full border-4 border-gray-800 left-2 md:left-1/2 md:transform md:-translate-x-1/2 ${
@@ -88,38 +85,36 @@ const Experience = () => {
                 }`}></div>
 
                 {/* Content card */}
-                <div className={`ml-12 md:ml-0 ${
-                  index % 2 === 0 ? 'md:mr-12' : 'md:ml-12'
-                }`}>
+                <div className="ml-12 md:ml-0 md:mr-12">
                   <div className="bg-gray-900 rounded-lg p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-gray-700 hover:border-purple-400/50">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Calendar className="text-purple-400" size={16} />
-                      <span className="text-purple-400 font-medium">{exp.period}</span>
+                    <div className="flex items-center justify-end gap-2 mb-2">
                       {exp.isActive && (
                         <span className="bg-purple-400/20 text-purple-400 px-2 py-1 rounded-full text-xs font-medium">
                           Current
                         </span>
                       )}
+                      <span className="text-purple-400 font-medium">{exp.period}</span>
+                      <Calendar className="text-purple-400" size={16} />
                     </div>
                     
-                    <h3 className="text-xl font-bold text-white mb-1">{exp.company}</h3>
-                    <h4 className="text-lg text-gray-300 mb-4">{exp.role}</h4>
+                    <h3 className="text-xl font-bold text-white mb-1 text-right">{exp.company}</h3>
+                    <h4 className="text-lg text-gray-300 mb-4 text-right">{exp.role}</h4>
                     
-                    <p className="text-gray-400 mb-4 leading-relaxed">
+                    <p className="text-gray-400 mb-4 leading-relaxed text-right">
                       {exp.description}
                     </p>
                     
                     {exp.details && (
-                      <ul className="text-gray-400 mb-4 space-y-1">
+                      <div className="text-gray-400 mb-4 space-y-1 text-right">
                         {exp.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="text-sm leading-relaxed">
-                            • {detail}
-                          </li>
+                          <div key={detailIndex} className="text-sm leading-relaxed">
+                            {detail} •
+                          </div>
                         ))}
-                      </ul>
+                      </div>
                     )}
                     
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 justify-end">
                       {exp.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}

@@ -1,4 +1,3 @@
-
 import { Code, Database, Settings, TestTube } from 'lucide-react';
 
 const Skills = () => {
@@ -8,8 +7,7 @@ const Skills = () => {
       icon: Database,
       skills: [
         "Kotlin", "Java", "Groovy", "Spring Framework", "Apache Kafka", 
-        "MongoDB", "MySQL", "PostgreSQL", "Elasticsearch", "JUnit5", 
-        "Kotest", "Spock", "Mockk", "RestAssured", "Testcontainers"
+        "MongoDB", "MySQL", "PostgreSQL", "Elasticsearch"
       ],
       color: "purple"
     },
